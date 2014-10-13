@@ -6,20 +6,26 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+#
+case node['platform']
+when 'redhat', 'centos'
+  node.default['nginx']['default_root'] = '/usr/share/nginx/html'
+end
+
 # Create web root
-directory '/var/www/nginx-default' do
+directory node['nginx']['default_root'] do
   recursive true
 end
 
 # Clone website project
-git '/var/www/nginx-default/' do
+git node['nginx']['default_root'] do
   repository 'https://github.com/dude051/icanhazdevops-site.git'
   reference 'master'
   action :sync
 end
 
 # Create a dynamic index.html
-template '/var/www/nginx-default/index.html' do
+template "#{node['nginx']['default_root']}/index.html" do
   source 'index.html.erb'
   owner 'root'
   group 'root'

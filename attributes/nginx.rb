@@ -1,11 +1,9 @@
 #
 # Cookbook Name:: icanhazdevops
-# Attribute:: gem_installer
+# Attribute:: nginx
 #
 # Copyright (C) 2014 Justin Seubert
 #
 # All rights reserved - Do Not Redistribute
 #
-node.default['gem_installer']['gems'] = {
-    fog: nil
-}
+default['nginx']['server_names_hash_bucket_size'] = 128
