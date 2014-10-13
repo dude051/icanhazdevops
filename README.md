@@ -1,10 +1,13 @@
 # icanhazdevops-cookbook
 
-TODO: Enter the cookbook description here.
+DESIGND SIET
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Ubuntu 10.04, 12.04
+Debian Wheezy
+CentOS/RHEL 5,6
+CHEEZEBURGERS
 
 ## Attributes
 
@@ -39,4 +42,4 @@ Include `icanhazdevops` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Justin Seubert (<justin.seubert@rackspace.com>)
