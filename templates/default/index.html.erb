@@ -15,7 +15,9 @@
                 <h2><%= @name %></h2>
                 <p>Under construction on server <%= @hostname %><br />
                 In the mean time, here is a cat..</p>
+<% if node['icanhazdevops']['bacon'] %>
                 <a href="http://www.lolcats.com/popular/50127-if-not-for-sits-why-is-it-made-of-warm.html"><img src="http://www.lolcats.com/images/u/11/45/lolcatsdotcom3gp6wm7dw3jihq9t.jpg" alt="If not for sits... why is it made of warm? - lolcats.com" /></a>
+<% end %>
         </div>
 </body>
 </html>
