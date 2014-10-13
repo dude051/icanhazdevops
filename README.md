@@ -43,11 +43,22 @@ knife rackspace server create -A 'USERNAME' -K 'APIKEY' -I 'ea322e55-0a03-48d6-b
 
 ### icanhazdevops::default
 
-Include `icanhazdevops` in your node's `run_list`:
+Include `icanhazdevops` in your node's `run_list` and your distro specific package cookbook:
 
+Ubuntu/Debian
 ```json
 {
   "run_list": [
+    "recipe[apt]",
+    "recipe[icanhazdevops::default]"
+  ]
+}
+```
+RHEL/Debian
+```json
+{
+  "run_list": [
+    "recipe[yum]",
     "recipe[icanhazdevops::default]"
   ]
 }
