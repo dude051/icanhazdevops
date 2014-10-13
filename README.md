@@ -2,12 +2,25 @@
 
 DESIGND SIET
 
+## Example Berkshelf Deploy
+
+```
+berks install
+berks upload
+```
+
+## Example Knife Rackspace Command
+
+```
+knife rackspace server create -A 'USERNAME' -K 'APIKEY' -I 'ea322e55-0a03-48d6-b812-d9cf77fd05e7' -f 'performance1-1' --rackspace-region 'IAD' -E stage -r 'role[icanhaz]' --bootstrap-version latest --no-tcp-test-ssh --ssh-wait-timeout 15
+```
+
 ## Supported Platforms
 
-Ubuntu 10.04, 12.04
-Debian Wheezy
-CentOS/RHEL 5,6
-CHEEZEBURGERS
+- Ubuntu 10.04, 12.04
+- Debian Wheezy
+- CentOS/RHEL 5,6
+- CHEEZEBURGERS
 
 ## Attributes
 
