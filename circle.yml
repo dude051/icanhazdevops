@@ -21,4 +21,6 @@ deployment:
   staging:
     branch: staging
     commands:
+      - echo $CIRCLE_CI_MACHINE_USER_CLIENT_KEY > ~/.chef/client.pem
+      - echo $CIRCLE_CI_CHEF_ORG_KEY > ~/.chef/validator.pem
       - knife ssh "chef_environment:staging $KNIFE_SEARCH" $KNIFE_COMMAND -a ipaddress -x $KNIFE_USER
