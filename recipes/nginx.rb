@@ -30,9 +30,9 @@ template "#{node['nginx']['default_root']}/index.html" do
   owner 'root'
   group 'root'
   mode 0644
-  variables({
+  variables(
     company: 'I Can Haz DevOps',
     name: 'Justin Seubert',
     hostname: node['hostname']
-  })
+  )
 end

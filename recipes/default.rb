@@ -9,12 +9,6 @@
 %w(
   nginx
   vim
-  screen
-  build-essential
-  python
-  ruby
-  curl
-  git
   icanhazdevops::nginx
 ).each do |cookbook|
   include_recipe cookbook
@@ -33,10 +27,7 @@ when 'debian', 'ubuntu'
     libxml2-dev
   )
 end
-    
+
 lib_pkg.each do |pkg|
   package pkg
 end
-
-# Install fog
-gem_package 'fog'
