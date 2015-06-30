@@ -19,6 +19,6 @@ deployment:
     commands:
       - knife ssh "chef_environment:production $KNIFE_SEARCH" $KNIFE_COMMAND -a ipaddress -x $KNIFE_USER
   staging:
-    branch: master
+    branch: staging
     commands:
       - knife ssh "chef_environment:staging $KNIFE_SEARCH" $KNIFE_COMMAND -a ipaddress -x $KNIFE_USER
